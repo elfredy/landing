@@ -1,0 +1,38 @@
+.video-section{
+	width: 100%;
+	height: 60rem;
+	background-image: linear-gradient(rgba(0,9,1,.3),rgba(0,9,1,.5)), 
+	url('../../img/image.png');
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	padding: 20rem 10rem;
+	
+	@include respondmax(sm){
+		padding: 0;
+		height: 30rem;
+	}
+	& .col-md-12{
+
+		& p{
+			@include font($ll, 1.4rem, #fff, $w:900);
+		}
+	}
+	
+
+	.col-md-6 .fa{
+		color: chartreuse !important;
+	}
+}
+
+.close{
+	font-size: 28px;
+	margin-top: -15px;
+}
+
+.modal-body{
+
+
+	max-height: 400px;
+	overflow-y: auto;
+}

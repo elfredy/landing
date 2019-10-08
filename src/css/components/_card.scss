@@ -1,0 +1,88 @@
+.card{
+	padding: 3rem;
+	max-width: 38rem;
+	height: 38rem;
+	position: relative;
+	transition: all .4s;
+	box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 1);
+
+	
+	@include respondmax(sm){
+		padding: 2rem;
+		max-width: 32rem;
+		height: 30rem;
+	}
+
+	&:hover{
+		cursor: pointer;
+		box-shadow: 0 1rem 2rem rgba(0,0,0,.6);
+		transform: translateY(-5px);
+	}
+
+	&__icon{
+		height: 8.8rem;
+		width: 8.8rem;
+		border-radius: 50%;
+		background-color: #325DFF;
+		color: #fff;
+		margin-top: 4rem;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translate(-50% );
+
+		@include respondmin(md){
+			height: 7.8rem;
+			width: 7.8rem;
+		}
+
+
+		& .fas{
+			line-height: 8rem;
+
+			@include respondmin(md){
+				font-size: 2.5rem;
+			}
+		}
+
+		@include respondmax(xl) {
+			margin-top: 2.5rem;
+		}		
+
+	}
+
+	&__title{
+		@include font($ll, 2.5rem, #000, $w:900);
+		margin-bottom: 3rem;
+		margin-top: 40%;
+
+		@include respondmax(xl) {
+			margin-top: 50%;
+		}
+
+		@include respondmin(md){
+			@include font($ll, 1.8rem, #000, $w:900);
+			margin-top: 70%;
+		}
+		
+		@include respondmax(sm){
+			@include font($ll, 1.8rem, #000, $w:900);
+			margin-top: 50%;
+			margin-bottom: 2rem;
+		}
+
+	}
+
+	&__text{
+		@include font($ll, 1.8rem, #777, $w:900);
+		margin-bottom: 0; 
+
+		@include respondmin(md){
+			@include font($ll, 1.4rem, #000, $w:900);
+		}
+
+		@include respondmax(sm){
+			@include font($ll, 1.4rem, #000, $w:900);
+		}
+	}
+}

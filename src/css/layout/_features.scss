@@ -1,0 +1,182 @@
+.features{
+	padding-top: 10rem ;
+	
+	@include respondmax(sm){
+		padding-top: 2rem;
+	}
+}
+.feature-1{
+	width: 100%;
+	height: 60rem;
+	background-color: #fff;
+
+	@include respondmin(md){
+		height: 50rem;
+	}
+
+	@include respondmax(sm) {
+		height: 45rem;
+	}
+
+	&__left{
+		width: 50%;
+		float: left;
+		padding: 10rem 5rem;
+		text-align: left;
+		height: 60rem;
+
+		@include respondmin(md){
+			height: 50rem;
+			padding: 8rem 3.5rem;
+
+		}
+
+		@include respondmax(sm) {
+			width: 100%;
+			height: 45rem;
+			padding: 5rem 3rem;
+			text-align: center;
+		}
+
+		&--title{
+			@include font($ll, 5rem, #000, $w:400);
+			margin-bottom: 3rem;
+
+			@include respondmin(md){
+				@include font($ll, 3rem, #000, $w:400);
+			}
+
+			@include respondmax(sm) {
+				@include font($ll, 2.5rem, #000, $w:400);
+			}
+		}
+
+		&--text{
+			@include font($ll, 1.8rem, #000, $w:400);
+			text-align: left;
+			margin-bottom: 3rem;
+
+			@include respondmax(sm) {
+				text-align: center;
+			}
+		}
+
+
+	}
+
+	&__right{
+		width: 50%;
+		float: right;
+		height: 60rem;
+
+		@include respondmin(md){
+			height: 50rem;
+		}
+
+		@include respondmax(sm) {
+			width: 0;
+		}
+
+
+		&--img{
+			width: 100%;
+			height: 60rem;
+
+			@include respondmin(md){
+				height: 50rem;
+			}
+
+			@include respondmax(sm) {
+				width: 0;
+			}
+		}
+	}
+}
+
+.feature-2{
+	width: 100%;
+	height: 60rem;
+	background-color: #fff;
+	
+	@include respondmin(md){
+		height: 50rem;
+	}
+
+	@include respondmax(sm) {
+		height: 45rem;
+	}
+
+	&__left{
+		width: 50%;
+		height: 60rem;
+		float: right;
+		padding: 10rem 5rem;
+		text-align: left;
+
+		@include respondmin(md){
+			height: 50rem;
+			padding: 8rem 3.5rem;
+
+		}
+
+		@include respondmax(sm) {
+			width: 100%;
+			height: 45rem;
+			padding: 5rem 3rem;
+			text-align: center;
+		}
+
+		&--title{
+			@include font($ll, 5rem, #000, $w:400);
+			margin-bottom: 3rem;
+
+			@include respondmin(md){
+				@include font($ll, 3rem, #000, $w:400);
+			}
+
+			@include respondmax(sm) {
+				@include font($ll, 2.5rem, #000, $w:400);
+			}
+		}
+
+		&--text{
+			@include font($ll, 1.8rem, #000, $w:400);
+			text-align: left;
+			margin-bottom: 3rem;
+
+			@include respondmax(sm) {
+				text-align: center;
+			}
+		}
+
+
+	}
+
+	&__right{
+		width: 50%;
+		float: left;
+		height: 60rem;
+
+		@include respondmin(md){
+			height: 50rem;
+		}
+
+		@include respondmax(sm) {
+			width: 0;
+		}
+
+		&--img{
+			width: 100%;
+			height: 60rem;
+
+			@include respondmin(md){
+				height: 50rem;
+			}
+
+			@include respondmax(sm) {
+				width: 0;
+			}
+		}
+	}
+}
+
