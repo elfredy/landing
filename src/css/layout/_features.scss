@@ -7,33 +7,32 @@
 }
 .feature-1{
 	width: 100%;
-	height: 60rem;
-	background-color: #fff;
+	padding: 0;
+	display: flex;
 
-	@include respondmin(md){
-		height: 50rem;
-	}
-
-	@include respondmax(sm) {
-		height: 45rem;
-	}
 
 	&__left{
 		width: 50%;
-		float: left;
-		padding: 10rem 5rem;
+		background-color: #fff;
+		padding: 9rem;
 		text-align: left;
-		height: 60rem;
 
-		@include respondmin(md){
-			height: 50rem;
-			padding: 8rem 3.5rem;
+		@include respondmax(xl){
+			padding: 3rem 6rem;
+		}
+
+		@include respondmax(lg){
+			padding: 0;
+			padding-left: 1rem;
+		}
+
+		@include respondmax(md){
+			padding: 2rem 1.5rem;
 
 		}
 
 		@include respondmax(sm) {
 			width: 100%;
-			height: 45rem;
 			padding: 5rem 3rem;
 			text-align: center;
 		}
@@ -41,8 +40,12 @@
 		&--title{
 			@include font($ll, 5rem, #000, $w:400);
 			margin-bottom: 3rem;
+			
+			@include respondmax(xl){
+				@include font($ll, 4rem, #000, $w:400);
+			}
 
-			@include respondmin(md){
+			@include respondmax(md){
 				@include font($ll, 3rem, #000, $w:400);
 			}
 
@@ -66,117 +69,16 @@
 
 	&__right{
 		width: 50%;
-		float: right;
-		height: 60rem;
-
-		@include respondmin(md){
-			height: 50rem;
-		}
 
 		@include respondmax(sm) {
 			width: 0;
 		}
 
 
-		&--img{
+		.img-fluid{
 			width: 100%;
-			height: 60rem;
+			height: 100%;
 
-			@include respondmin(md){
-				height: 50rem;
-			}
-
-			@include respondmax(sm) {
-				width: 0;
-			}
 		}
 	}
 }
-
-.feature-2{
-	width: 100%;
-	height: 60rem;
-	background-color: #fff;
-	
-	@include respondmin(md){
-		height: 50rem;
-	}
-
-	@include respondmax(sm) {
-		height: 45rem;
-	}
-
-	&__left{
-		width: 50%;
-		height: 60rem;
-		float: right;
-		padding: 10rem 5rem;
-		text-align: left;
-
-		@include respondmin(md){
-			height: 50rem;
-			padding: 8rem 3.5rem;
-
-		}
-
-		@include respondmax(sm) {
-			width: 100%;
-			height: 45rem;
-			padding: 5rem 3rem;
-			text-align: center;
-		}
-
-		&--title{
-			@include font($ll, 5rem, #000, $w:400);
-			margin-bottom: 3rem;
-
-			@include respondmin(md){
-				@include font($ll, 3rem, #000, $w:400);
-			}
-
-			@include respondmax(sm) {
-				@include font($ll, 2.5rem, #000, $w:400);
-			}
-		}
-
-		&--text{
-			@include font($ll, 1.8rem, #000, $w:400);
-			text-align: left;
-			margin-bottom: 3rem;
-
-			@include respondmax(sm) {
-				text-align: center;
-			}
-		}
-
-
-	}
-
-	&__right{
-		width: 50%;
-		float: left;
-		height: 60rem;
-
-		@include respondmin(md){
-			height: 50rem;
-		}
-
-		@include respondmax(sm) {
-			width: 0;
-		}
-
-		&--img{
-			width: 100%;
-			height: 60rem;
-
-			@include respondmin(md){
-				height: 50rem;
-			}
-
-			@include respondmax(sm) {
-				width: 0;
-			}
-		}
-	}
-}
-

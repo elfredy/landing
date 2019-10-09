@@ -52,7 +52,7 @@
 	}
 
 	@if $breakpoint == md {
-		@media (max-width: 768px) {@content};
+		@media (max-width: 767px) {@content};
 	}
 
 	@if $breakpoint == lg {

@@ -1,26 +1,19 @@
 .footer{
 	width: 100%;
-	height: 14rem;
 	background-color: #325DFF;
-	padding: 2rem 1rem;
-
-	@include respondmax(sm){
-		height: 8rem;
-	}
+	padding: 3rem 0;
 
 
 	&__text{
 		@include font($ll, 1.8rem, #fff, $w:900);
 		letter-spacing: 3px;
-		line-height: 11rem;
 
-		@include respondmin(md){
+		@include respondmax(md){
 			@include font($ll, 1.5rem, #fff, $w:900);
 		}
 
 		@include respondmax(sm){
 			@include font($ll, 1.1rem, #fff, $w:900);
-			line-height: 5rem;
 		}
 
 	}

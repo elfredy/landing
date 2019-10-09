@@ -5,18 +5,18 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	height: 65rem;
+	padding-bottom: 20rem;
 	max-width: 100%;
 	position: relative;
 
 	@include respondmax(sm) {
-		height: 45rem;
+		padding-bottom: 15rem;
 	}
 	
 
 	& .col-md-12{
 
-		@include respondmin(md) {
+		@include respondmax(md) {
 			margin-left: 0 !important;
 		}
 
@@ -62,6 +62,7 @@
 			margin-left: -2rem;
 			margin-right: -1rem;
 			z-index: 25;
+			
 		}
 	}
 
@@ -69,14 +70,25 @@
 		margin-left: auto;
 
 		.nav-link{
-
+			transition: all .2s;
 			@include font($ll, 1.8rem, #D9F0FF, $w:900);
 			text-transform: uppercase;
 
 			@include respondmax(md){
 				@include font($ll, 1.8rem, #010048, $w:900);
 			}
+
+			&:hover{
+				color: chartreuse;
+			}
+
+			&:active,
+			&:focus{
+				color: chartreuse;
+			}
 		}
+
+		
 
 	}
 
@@ -90,7 +102,7 @@
 			letter-spacing: -1px;
 		}
 
-		@include respondmin(md){
+		@include respondmax(md){
 			@include font($ll, 6rem, #D9F0FF, $w:700);
 		}
 
@@ -104,7 +116,7 @@
 	&__text{
 		@include font($ll, 1.8rem, #fff,$w:700);
 
-		@include respondmin(md){
+		@include respondmax(md){
 			@include font($ll, 1.4rem, #D9F0FF, $w:600);
 		}
 

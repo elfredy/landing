@@ -1,16 +1,12 @@
 .card{
 	padding: 3rem;
-	max-width: 38rem;
-	height: 38rem;
 	position: relative;
 	transition: all .4s;
-	box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 1);
-
+	margin-bottom: .5rem;
 	
+
 	@include respondmax(sm){
 		padding: 2rem;
-		max-width: 32rem;
-		height: 30rem;
 	}
 
 	&:hover{
@@ -31,16 +27,12 @@
 		left: 50%;
 		transform: translate(-50% );
 
-		@include respondmin(md){
-			height: 7.8rem;
-			width: 7.8rem;
-		}
 
 
 		& .fas{
 			line-height: 8rem;
 
-			@include respondmin(md){
+			@include respondmax(md){
 				font-size: 2.5rem;
 			}
 		}
@@ -54,22 +46,18 @@
 	&__title{
 		@include font($ll, 2.5rem, #000, $w:900);
 		margin-bottom: 3rem;
-		margin-top: 40%;
+		margin-top: 14rem;
 
-		@include respondmax(xl) {
-			margin-top: 50%;
+		@include respondmax(md){
+			@include font($ll, 2.5rem, #000, $w:900);
 		}
 
-		@include respondmin(md){
-			@include font($ll, 1.8rem, #000, $w:900);
-			margin-top: 70%;
+		@include respondmax(sm){
+			@include font($ll, 2.5rem, #000, $w:900);
+			margin-bottom: 3rem;
+			margin-top: 14rem;
 		}
 		
-		@include respondmax(sm){
-			@include font($ll, 1.8rem, #000, $w:900);
-			margin-top: 50%;
-			margin-bottom: 2rem;
-		}
 
 	}
 
@@ -77,12 +65,12 @@
 		@include font($ll, 1.8rem, #777, $w:900);
 		margin-bottom: 0; 
 
-		@include respondmin(md){
-			@include font($ll, 1.4rem, #000, $w:900);
+		@include respondmax(md){
+			@include font($ll, 1.4rem, #777, $w:900);
 		}
 
 		@include respondmax(sm){
-			@include font($ll, 1.4rem, #000, $w:900);
+			@include font($ll, 1.4rem, #777, $w:900);
 		}
 	}
 }
